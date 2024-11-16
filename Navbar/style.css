@@ -1,0 +1,132 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-family: sans-serif;
+    height: 100vh;
+    background-image: url(mountain.jpg);
+    background-position: center center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+header{
+    position: relative;
+    padding: 0.2rem;
+}
+nav{
+    height: 80px;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.logo a{
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgb(69, 97, 107);
+}
+.nav-links{
+    position: absolute;
+    right: 0;
+    top: 80px;
+    width: 100%;
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.open{
+    display: flex;
+}
+.nav-links .link {
+    font-size: 1.25rem;
+    color:aliceblue;
+    text-align: center;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.1s ease;
+}
+.nav-links .link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #65817f;
+}
+
+
+.btn {
+    display: block;
+    color:aliceblue;
+    font-size: 2rem;
+}
+.hero {
+    max-width: 1200px;
+    height: calc(100vh - 80px);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color:aliceblue;
+}
+.hero h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1rem;
+}
+.hero h1 {
+    font-size: 6rem;
+    font-weight: 700;
+}
+.hero button {
+    width: 150px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+}
+@media screen and (min-width: 640px) {
+    .nav-links {
+      width: 250px;
+    }
+  
+    .hero {
+      align-items: flex-start;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .nav-links {
+      position: unset;
+      width: unset;
+      flex-direction: row;
+      gap: 0.5rem;
+      display: flex;
+      background: transparent;
+    }
+  
+    .btn {
+      display: none;
+    }
+  
+    .hero h2 {
+      font-size: 4rem;
+    }
+  
+    .hero h1 {
+      font-size: 8rem;
+    }
+  
+    .hero button {
+      width: 200px;
+      padding: 1rem;
+    }
+}
