@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+.content {
+  margin-left: auto;
+  padding: 2rem;
+  width: 100%;
+  max-width: 550px;
+}
+.logo {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #465485;
+}
+.logo img {
+  max-width: 40px;
+}
+.content h1 {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color:#465485;
+}
+.content form {
+  display: grid;
+  gap: 3rem;
+}
+.input-row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.input-group {
+  width: 100%;
+  position: relative;
+}
+.input-group input {
+  width: 100%;
+  padding: 1rem ;
+  font-size: 1rem;
+  color: #333333;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #465485;
+}
+
+/* for error */
+ .input-group.error input {
+  border-color: red;
+}
+.input-group label { 
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  font-size: 1rem;
+  color: #333333;
+  pointer-events: none;
+  transition: 0.3s;
+}
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label {
+  font-size: 0.8rem;
+  top: -0.5rem;
+  color: #767368;
+}
+.input-group .error-field {
+  position: absolute;
+  left: 0;
+  bottom: -22px;
+  font-size: 0.8rem;
+  color: red;
+}
+.content button {
+  max-width: fit-content;
+  margin: auto;
+  padding: 1rem 4rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  background-image: linear-gradient( to bottom, #465485, #3f4370);
+  border-radius: 5rem;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.image {
+  height: 100%;
+  margin-left: 8rem;
+  background-image: url("images/background.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+} 
